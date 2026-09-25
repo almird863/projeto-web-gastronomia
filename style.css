@@ -3,6 +3,10 @@
     padding: 0;
 }
 
-.hero {
+main {
+    justify-items: center;
     background-image: url(assets/img-bg.jpg);
+    .hero {
+        padding: 50px 0px;
+    }
 }
