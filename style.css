@@ -2,11 +2,3 @@
     margin: 0;
     padding: 0;
 }
-
-main {
-    justify-items: center;
-    background-image: url(assets/img-bg.jpg);
-    .hero {
-        padding: 50px 0px;
-    }
-}
