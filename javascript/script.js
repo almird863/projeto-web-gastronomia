@@ -5,7 +5,8 @@ pesqValor.addEventListener('input', (evento) => {
     const termo = evento.target.value.toLowerCase();
 
     itens.forEach(itens => {
-        const textoItem = itens.textContent.toLowerCase();
+        const nomeItem = itens.querySelector('h3');
+        const textoItem = nomeItem.textContent.toLowerCase();
         if (textoItem.includes(termo)) {
             itens.style.display = "block";
         }
