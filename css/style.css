@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: chocolate;
+    color:antiquewhite
+}
+
+a {
+    text-decoration: wavy;
+    color:bisque
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.main-header {
+    background-color: beige;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+}
+
+.main-header h1 {
+    font-size: 28px;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu li {
+    cursor: pointer;
+}
+
+.menu a {
+    color: white;
+}
+
+.menu a:hover {
+    color: white; 
+}
