@@ -634,4 +634,5 @@ input:focus-visible {
     .grid-categoria {
         grid-template-columns: 1fr;
     }
+    
 }
