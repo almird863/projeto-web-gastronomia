@@ -1,18 +1,45 @@
+/* ========================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
+======================================== */
+
+:root {
+    --cor-principal: #f64141;
+    --cor-secundaria: #cf7b3e;
+    --cor-escura: #292524;
+    --cor-fundo: #fff8f2;
+    --cor-branca: #ffffff;
+    --cor-texto: #44403c;
+    --cor-texto-claro: #a8a29e;
+    --cor-borda: #e7e0da;
+
+    --sombra: 0 5px 20px rgba(41, 37, 36, 0.08);
+    --sombra-hover: 0 12px 28px rgba(41, 37, 36, 0.15);
+
+    --raio: 12px;
+    --transicao: 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
-    font-family: Arial, Arial, Helvetica, sans-serif;
-    background-color: chocolate;
-    color:antiquewhite
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
 }
 
 a {
-    text-decoration: wavy;
-    color:bisque
+    color: inherit;
+    text-decoration: none;
 }
 
 ul {
@@ -20,27 +47,56 @@ ul {
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
+button,
+input {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ========================================
+   2. CABEÇALHO E MENU
+======================================== */
+
 .main-header {
-    background-color: beige;
-    color: white;
+    width: 100%;
+    min-height: 80px;
+    padding: 18px 8%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    gap: 24px;
 
-    h1 {
-        font-size: 28px;
-    }
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+
+    position: relative;
+    z-index: 10;
+}
+
+.main-header h1 {
+    color: var(--cor-principal);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .menu {
     ul {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 25px;
     }
     
@@ -57,3 +113,24 @@ img {
     }
 }
 
+.menu li {
+    color: var(--cor-branca);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color var(--transicao);
+}
+
+.menu a {
+    display: inline-block;
+    transition: color var(--transicao);
+}
+
+.menu a:hover,
+.menu li:hover {
+    color: var(--cor-secundaria);
+}
+
+
+/* ========================================
+   3. ÁREA DE PESQUISA (HERO)
