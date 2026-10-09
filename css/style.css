@@ -91,12 +91,26 @@ a {
     white-space: nowrap;
 }
 
-.menu ul {
+.menu {
+    ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+    }
+    
+    li {
+      cursor: pointer;
+    }
+    
+    a {
+      color: white;
+    }
+    
+    a:hover {
+      color: white; 
+    }
 }
 
 .menu li {
