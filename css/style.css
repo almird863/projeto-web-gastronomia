@@ -27,36 +27,33 @@ img {
 .main-header {
     background-color: beige;
     color: white;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px 8%;
+
+    h1 {
+        font-size: 28px;
+    }
 }
 
-.main-header h1 {
-    font-size: 28px;
-}
-
-.menu ul {
+.menu {
+    ul {
     display: flex;
     align-items: center;
     gap: 25px;
+    }
+    
+    li {
+      cursor: pointer;
+    }
+    
+    a {
+      color: white;
+    }
+    
+    a:hover {
+      color: white; 
+    }
 }
 
-.menu li {
-    cursor: pointer;
-}
-
-.menu a {
-    color: white;
-}
-
-.menu a:hover {
-    color: white; 
-}
-
-.hero {
-    min-height: ;
-}
