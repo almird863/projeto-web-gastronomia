@@ -88,7 +88,7 @@ a {
 }
 
 .main-header img {
-    max-width: 280px; /* Ajuste este valor conforme preferir (ex: 100px, 120px) */
+    max-width: 280px;
     height: auto;
     object-fit: contain;
 }
@@ -101,26 +101,12 @@ a {
     white-space: nowrap;
 }
 
-.menu {
-    ul {
+.menu ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    }
-    
-    li {
-      cursor: pointer;
-    }
-    
-    a {
-      color: white;
-    }
-    
-    a:hover {
-      color: white; 
-    }
 }
 
 .menu li {
@@ -133,6 +119,7 @@ a {
 
 .menu a {
     display: inline-block;
+    color: white;
     transition: color var(--transicao);
 }
 
@@ -143,7 +130,7 @@ a {
 
 
 /* ========================================
-   3. ÁREA DE PESQUISA (HERO)
+   3. ÁREA DE PESQUISA (HERO - HOME)
 ======================================== */
 
 .hero {
@@ -244,14 +231,14 @@ a {
 
 
 /* ========================================
-   5. SEÇÃO DE DESTAQUES
+   5. SEÇÃO DE DESTAQUES (HOME)
 ======================================== */
 
 .destaque-grid {
     padding: 70px 8%;
 }
 
-.destaque-grid article {
+.destaque-grid > article {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
@@ -337,7 +324,7 @@ a {
 
 
 /* ========================================
-   7. SEÇÃO DE CATEGORIAS
+   7. SEÇÃO DE CATEGORIAS (HOME)
 ======================================== */
 
 #categorias {
@@ -368,13 +355,11 @@ a {
 
     box-shadow: var(--sombra);
 
-    /* Transição suave do card */
     transition:
         transform var(--transicao),
         box-shadow var(--transicao),
         border-color var(--transicao);
 
-    /* ALINHAMENTO LADO A LADO (INLINE) */
     display: flex;
     align-items: center;
     padding: 16px;
@@ -387,12 +372,11 @@ a {
     box-shadow: var(--sombra-hover);
 }
 
-/* Container da Imagem (Quadrado com Bordas Arredondadas) */
 .card-categoria > div:first-child {
     flex-shrink: 0;
     width: 70px;
     height: 70px;
-    border-radius: 12px; /* Borda arredondada do quadrado */
+    border-radius: 12px;
     overflow: hidden;
     background-color: #e7e0da;
 }
@@ -408,10 +392,9 @@ a {
     transform: scale(1.05);
 }
 
-/* Container do Texto / Título */
 .card-categoria > div:last-child {
     padding: 0;
-    text-align: left; /* Alinhado à esquerda para combinar com a imagem ao lado */
+    text-align: left;
 }
 
 .card-categoria h3 {
@@ -424,6 +407,7 @@ a {
 .card-categoria:hover h3 {
     color: var(--cor-principal);
 }
+
 
 /* ========================================
    8. RODAPÉ
@@ -506,7 +490,353 @@ input:focus-visible {
 
 
 /* ========================================
-   10. TABLETS
+   10. PÁGINA DE PESQUISA (PESQUISAR.HTML)
+======================================== */
+
+.pag-pesquisa {
+    padding: 40px 8% 20px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+}
+
+#pesq-valor {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px 20px;
+    background-color: var(--cor-branca);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--raio);
+    outline: none;
+    font-size: 16px;
+    box-shadow: var(--sombra);
+    transition: border-color var(--transicao), box-shadow var(--transicao);
+}
+
+#pesq-valor::placeholder {
+    color: var(--cor-texto-claro);
+}
+
+#pesq-valor:focus {
+    border-color: var(--cor-principal);
+    box-shadow: var(--sombra-hover);
+}
+
+.pag-pesquisa-main > section {
+    padding: 30px 8% 70px;
+    background-color: var(--cor-fundo);
+}
+
+.ul-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.pesq-ul-item {
+    min-width: 0;
+    overflow: hidden;
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+    display: flex;
+    flex-direction: column;
+}
+
+.pesq-ul-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+}
+
+.pesq-ul-item > div:first-child {
+    overflow: hidden;
+    background-color: #e7e0da;
+}
+
+.pesq-ul-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pesq-ul-item:hover img {
+    transform: scale(1.05);
+}
+
+.pesq-ul-item > div:last-child {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.pesq-ul-item h3 {
+    margin-bottom: 8px;
+    color: var(--cor-escura);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.pesq-ul-item p {
+    margin-bottom: 15px;
+    color: #78716c;
+    font-size: 14px;
+}
+
+.pesq-ul-item ul {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--cor-borda);
+    list-style: none;
+}
+
+.pesq-ul-item li {
+    margin-bottom: 7px;
+    color: var(--cor-texto);
+    font-size: 13px;
+}
+
+.pesq-ul-item li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   11. PÁGINA DO FOOD TRUCK (DETALHES)
+   (Isoladas com a classe .page-detalhes no body ou container)
+======================================== */
+
+.page-detalhes main > section:nth-of-type(1) {
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background-color: var(--cor-fundo);
+}
+
+.page-detalhes main > section:nth-of-type(1) > div:first-child {
+    overflow: hidden;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    background-color: #e7e0da;
+}
+
+#ft-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.page-detalhes main > section:nth-of-type(1) > div:last-child > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+#ft-titulo {
+    color: var(--cor-escura);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#fav-icon img,
+#ft-wpp {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: transform var(--transicao);
+}
+
+#fav-icon img:hover,
+#ft-wpp:hover {
+    transform: scale(1.1);
+}
+
+#ft-desc {
+    color: #78716c;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.page-detalhes main > section:nth-of-type(2) {
+    padding: 50px 8%;
+    background-color: var(--cor-branca);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.page-detalhes main > section:nth-of-type(2) > div {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 25px;
+    box-shadow: var(--sombra);
+}
+
+.page-detalhes main > section:nth-of-type(2) > div:last-child {
+    grid-column: 1 / -1;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page-detalhes main > section:nth-of-type(2) h2 {
+    color: var(--cor-escura);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-detalhes main > section:nth-of-type(2) p {
+    color: var(--cor-texto);
+    font-size: 14px;
+}
+
+.ft-mapa {
+    width: 100%;
+    height: 350px;
+    border: none;
+    display: block;
+}
+
+.page-detalhes main > section:nth-of-type(3) {
+    padding: 60px 8%;
+    background-color: var(--cor-fundo);
+}
+
+.page-detalhes main > section:nth-of-type(3) > div:first-child {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: var(--cor-branca);
+    padding: 20px;
+    border-radius: var(--raio);
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra);
+    flex-wrap: wrap;
+}
+
+#comment-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 14px 18px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    color: var(--cor-texto);
+    transition: border-color var(--transicao);
+}
+
+#comment-box:focus {
+    border-color: var(--cor-principal);
+}
+
+.star-rating {
+    cursor: pointer;
+    accent-color: var(--cor-secundaria);
+}
+
+#comment-box-submit {
+    padding: 14px 25px;
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transicao);
+}
+
+#comment-box-submit:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.review-card {
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--sombra);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.review-card hr {
+    display: none;
+}
+
+.review-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e7e0da;
+}
+
+.review-nome-estrela-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.review-nome-estrela-inline h3 {
+    color: var(--cor-escura);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.review-nome-estrela-inline img {
+    height: 16px;
+    object-fit: contain;
+}
+
+.review-card p {
+    color: var(--cor-texto);
+    font-size: 14px;
+}
+
+.page-detalhes main > section:nth-of-type(4) {
+    padding: 60px 8%;
+    background-color: var(--cor-branca);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.page-detalhes main > section:nth-of-type(4) > h3 {
+    grid-column: 1 / -1;
+    color: var(--cor-escura);
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.page-detalhes main > section:nth-of-type(4) > a {
+    display: block;
+    border-radius: var(--raio);
+    text-decoration: none;
+}
+
+.page-detalhes main > section:nth-of-type(4) .destaque-card {
+    height: 100%;
+}
+
+
+/* ========================================
+   12. RESPONSIVIDADE GERAL
 ======================================== */
 
 @media (max-width: 1000px) {
@@ -520,15 +850,25 @@ input:focus-visible {
     }
 
     .destaque-grid,
-    #categorias {
+    #categorias,
+    .pag-pesquisa-main > section {
         padding: 55px 5%;
     }
 
-    .destaque-grid article {
+    .destaque-grid article,
+    .ul-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .grid-categoria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-detalhes main > section:nth-of-type(1) {
+        grid-template-columns: 1fr;
+    }
+
+    .page-detalhes main > section:nth-of-type(4) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -537,11 +877,6 @@ input:focus-visible {
         padding-left: 5%;
     }
 }
-
-
-/* ========================================
-   11. CELULARES
-======================================== */
 
 @media (max-width: 600px) {
     .main-header {
@@ -585,7 +920,8 @@ input:focus-visible {
     }
 
     .destaque-grid,
-    #categorias {
+    #categorias,
+    .pag-pesquisa-main > section {
         padding: 45px 5%;
     }
 
@@ -595,13 +931,10 @@ input:focus-visible {
         font-size: 26px;
     }
 
-    .destaque-grid article {
+    .destaque-grid article,
+    .ul-grid {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .destaque-card-img {
-        height: 220px;
     }
 
     .grid-categoria {
@@ -619,6 +952,27 @@ input:focus-visible {
 
     .card-categoria h3 {
         font-size: 15px;
+    }
+
+    .page-detalhes main > section:nth-of-type(1),
+    .page-detalhes main > section:nth-of-type(2),
+    .page-detalhes main > section:nth-of-type(3),
+    .page-detalhes main > section:nth-of-type(4) {
+        padding: 45px 5%;
+    }
+
+    .page-detalhes main > section:nth-of-type(2),
+    .page-detalhes main > section:nth-of-type(4) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #ft-titulo {
+        font-size: 26px;
+    }
+
+    #ft-img {
+        height: 250px;
     }
 
     footer {
@@ -645,11 +999,6 @@ input:focus-visible {
     }
 }
 
-
-/* ========================================
-   12. CELULARES MUITO PEQUENOS
-======================================== */
-
 @media (max-width: 360px) {
     .menu ul {
         gap: 10px;
@@ -666,5 +1015,4 @@ input:focus-visible {
     .grid-categoria {
         grid-template-columns: 1fr;
     }
-    
 }
