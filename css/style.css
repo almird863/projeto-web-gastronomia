@@ -654,9 +654,10 @@ input:focus-visible {
 }
 
 #fav-icon img,
-#ft-wpp {
+#wpp-icon img {
     width: 28px;
     height: 28px;
+    border-radius: 50%;
     object-fit: contain;
     transition: transform var(--transicao);
 }
