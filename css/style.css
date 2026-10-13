@@ -246,7 +246,7 @@ a {
 
 
 /* ========================================
-   6. CARDS DOS FOOD TRUCKS
+    6. CARDS DOS FOOD TRUCKS
 ======================================== */
 
 .destaque-card {
@@ -269,7 +269,14 @@ a {
     box-shadow: var(--sombra-hover);
 }
 
-.destaque-card > div:first-child {
+/* Garante que o link ocupe todo o card e remova estilos padrão */
+.destaque-card > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.destaque-card a > div:first-child {
     overflow: hidden;
     background-color: #e7e0da;
 }
@@ -287,7 +294,7 @@ a {
     transform: scale(1.05);
 }
 
-.destaque-card > div:last-child {
+.destaque-card a > div:last-child {
     padding: 20px;
 }
 
