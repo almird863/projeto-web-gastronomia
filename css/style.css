@@ -541,7 +541,7 @@ input:focus-visible {
     gap: 25px;
 }
 
-.pesq-ul-item {
+.pesq-ul-item a {
     min-width: 0;
     overflow: hidden;
     background-color: var(--cor-branca);
@@ -553,7 +553,7 @@ input:focus-visible {
     flex-direction: column;
 }
 
-.pesq-ul-item:hover {
+.pesq-ul-item a:hover {
     transform: translateY(-6px);
     box-shadow: var(--sombra-hover);
 }
@@ -570,11 +570,11 @@ input:focus-visible {
     transition: transform 0.5s ease;
 }
 
-.pesq-ul-item:hover img {
+.pesq-ul-item a:hover img {
     transform: scale(1.05);
 }
 
-.pesq-ul-item > div:last-child {
+.pesq-ul-item a > div:last-child {
     padding: 20px;
     display: flex;
     flex-direction: column;
