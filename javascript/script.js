@@ -1,5 +1,7 @@
 const pesqValor = document.querySelector('#pesq-valor');
 const itens = document.querySelectorAll('.pesq-ul-item');
+//
+const commentBtn = document.getElementById('comment-box-submit');
 
 pesqValor.addEventListener('input', (evento) => {
     const termo = evento.target.value.toLowerCase();
@@ -14,4 +16,26 @@ pesqValor.addEventListener('input', (evento) => {
             itens.style.display = "none";
         }
     });
+});
+
+commentBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const textComentario = document.getElementById('comment-box').value;
+    const starRating = document.querySelector('.star-rating').value;
+
+    if (textComentario.trim() == '') {
+        alert('Por favor, escreva um comentário.');
+        return;
+    }
+
+    const cardModelo = document.getElementById('review-card');
+    const novoCard = cardModelo.cloneNode(true);
+
+    novoCard.removeAttribute('id');
+
+    const areaComentarios = document.getElementById('comment-box-area');
+    areaComentarios.appendChild(novoCard);
+
+    document.getElementById('comment-box').value = '';
 });
