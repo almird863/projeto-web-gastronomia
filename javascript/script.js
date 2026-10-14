@@ -3,20 +3,23 @@ const itens = document.querySelectorAll('.pesq-ul-item');
 //
 const commentBtn = document.getElementById('comment-box-submit');
 
-pesqValor.addEventListener('input', (evento) => {
-    const termo = evento.target.value.toLowerCase();
 
-    itens.forEach(itens => {
-        const nomeItem = itens.querySelector('h3');
-        const textoItem = nomeItem.textContent.toLowerCase();
-        if (textoItem.includes(termo)) {
-            itens.style.display = "block";
-        }
-        else {
-            itens.style.display = "none";
-        }
+if (pesqValor != null){
+    pesqValor.addEventListener('input', (evento) => {
+        const termo = evento.target.value.toLowerCase();
+
+        itens.forEach(itens => {
+            const nomeItem = itens.querySelector('h3');
+            const textoItem = nomeItem.textContent.toLowerCase();
+            if (textoItem.includes(termo)) {
+                itens.style.display = "block";
+            }
+            else {
+                itens.style.display = "none";
+            }
+        });
     });
-});
+}
 
 commentBtn.addEventListener('click', function (e) {
     e.preventDefault();
