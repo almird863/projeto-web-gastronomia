@@ -3,8 +3,7 @@ const itens = document.querySelectorAll('.pesq-ul-item');
 //
 const commentBtn = document.getElementById('comment-box-submit');
 
-
-if (pesqValor != null){
+if (pesqValor != null) {
     pesqValor.addEventListener('input', (evento) => {
         const termo = evento.target.value.toLowerCase();
 
@@ -21,24 +20,29 @@ if (pesqValor != null){
     });
 }
 
-commentBtn.addEventListener('click', function (e) {
-    e.preventDefault();
+if (commentBtn != null) {
+    commentBtn.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    const textComentario = document.getElementById('comment-box').value;
-    const starRating = document.querySelector('.star-rating').value;
+        const textComentario = document.getElementById('comment-box').value;
+        // const starRating = document.querySelector('.star-rating').value;
 
-    if (textComentario.trim() == '') {
-        alert('Por favor, escreva um comentário.');
-        return;
-    }
+        if (textComentario.trim() == '') {
+            alert('Por favor, escreva um comentário.');
+            return;
+        }
 
-    const cardModelo = document.getElementById('review-card');
-    const novoCard = cardModelo.cloneNode(true);
+        const cardModelo = document.getElementById('review-card');
+        const novoCard = cardModelo.cloneNode(true);
 
-    novoCard.removeAttribute('id');
+        novoCard.removeAttribute('id');
+        novoCard.querySelector('.titulo').textContent = "Usuário"
 
-    const areaComentarios = document.getElementById('comment-box-area');
-    areaComentarios.appendChild(novoCard);
+        novoCard.querySelector('.comentario').textContent = `${textComentario}`
 
-    document.getElementById('comment-box').value = '';
-});
+        const areaComentarios = document.getElementById('comment-box-area');
+        areaComentarios.appendChild(novoCard);
+
+        document.getElementById('comment-box').value = '';
+    });
+}
