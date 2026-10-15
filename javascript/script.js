@@ -2,6 +2,9 @@ const pesqValor = document.querySelector('#pesq-valor');
 const itens = document.querySelectorAll('.pesq-ul-item');
 //
 const commentBtn = document.getElementById('comment-box-submit');
+//
+const searchBar = document.getElementById('search-bar').value;
+const searchBtn = document.getElementById('btn-search');
 
 if (pesqValor != null) {
     pesqValor.addEventListener('input', (evento) => {
@@ -45,4 +48,13 @@ if (commentBtn != null) {
 
         document.getElementById('comment-box').value = '';
     });
+}
+
+if (searchBtn != null && searchBar != null) {
+    searchBtn.addEventListener('click', function() {
+        window.location.href = 'truck_page.html'
+    })
+}
+else {
+    alert("Por favor digite um nome.")
 }
