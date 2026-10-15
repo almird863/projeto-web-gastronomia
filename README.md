@@ -42,7 +42,7 @@ Verifica reviews e comentários antes de sair de casa. Gosta de sair e experimen
 Gosta de sair, experimentar novidades, frequentar eventos e compartilhar experiências nas redes sociais.
 
 ### Poder de compra aproximado
-Classe B e A, poder de compra médio para alto.
+Classe A e B, poder de compra médio para alto.
 
 ### Forma de utilização da tecnologia
 Usam a tecnologia de forma constante
