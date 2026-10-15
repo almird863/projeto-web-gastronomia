@@ -543,6 +543,7 @@ input:focus-visible {
 
 .pesq-ul-item a {
     min-width: 0;
+    height: 100%;
     overflow: hidden;
     background-color: var(--cor-branca);
     border: 1px solid var(--cor-borda);
