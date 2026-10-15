@@ -9,7 +9,7 @@ Falta de conhecimento da população sobre Food Trucks
 Disseminar informações como localização promoções sobre Food Trucks e Polos Gastronômicos em Fortaleza de forma acessível.
 
 ### Quem é o público?
-Jovens de 18 à 35 anos que moram em áreas nobres de Fortaleza e Região metropolitana, gostam de sair e experimentar novidades e compartilhar experiências nas redes sociais.
+Jovens de 18 à 55 anos que moram em áreas nobres de Fortaleza e Região metropolitana, gostam de sair e experimentar novidades e compartilhar experiências nas redes sociais.
 
 ### O que precisa ser desenvolvido?
 Aplicativo web de catálogo para apresentação e compartilhamento de informações e reviews de Food Trucks.
@@ -33,7 +33,7 @@ Segunda Metade da 3ª Semana: Review interno e refinamento da estrutura
 
 # Público Alvo
 ### Idade e localização
-18 à 35 anos, Fortaleza e RMF
+18 à 55 anos, Fortaleza e RMF
 
 ### Necessidades diárias e hábitos de consumo
 Verifica reviews e comentários antes de sair de casa. Gosta de sair e experimentar coisas novas, compartilhar experiências.
