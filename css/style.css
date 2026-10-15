@@ -778,7 +778,7 @@ input:focus-visible {
     box-shadow: var(--sombra);
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .review-card hr {
