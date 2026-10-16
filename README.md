@@ -1,4 +1,9 @@
 # Briefing
+### Grupo
+- Almir
+- Vânia
+- Max
+
 ### Quem é o cliente?
 Truck Place
 
